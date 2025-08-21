@@ -72,10 +72,10 @@ const CreateSessionForm = () => {
 		</p>
 
 		<form onSubmit={handleCreateSession} className="flex flex-col gap-3">
-			<Input value={formData.role} onChange={({ target }) => handleChange("role", target.value)} label="Target Role" placeholder="(e.g., Frontend Developer, UI/UX Designer, etc.)" type="text" id="session-role" name="role" autoComplete={autoComplete} />
-			<Input value={formData.experience} onChange={({ target }) => handleChange("experience", target.value)} label="Years of Experience" placeholder="(e.g., 1 year, 3 years, 5+ years)" type="number" id="session-experience" name="experience" autoComplete={autoComplete} />
-			<Input value={formData.topicsToFocus} onChange={({ target }) => handleChange("topicsToFocus", target.value)} label="Topics to Focus On" placeholder="(Comma-separated, e.g., React, Node.js, MongoDB)" type="text" id="session-topics" name="topicsToFocus" autoComplete={autoComplete} />
-			<Input value={formData.description} onChange={({ target }) => handleChange("description", target.value)} label="Description" placeholder="(Any specific goals or notes for this session)" type="text" id="session-description" name="description" autoComplete={autoComplete} />
+			<Input value={formData.role} onChange={({ target }) => handleChange("role", target.value)} label="Target Role" placeholder="(e.g., Frontend Developer, UI/UX Designer, etc.)" type="text" id="session-role" name="role" autoComplete="target role" />
+			<Input value={formData.experience} onChange={({ target }) => handleChange("experience", target.value)} label="Years of Experience" placeholder="(e.g., 1 year, 3 years, 5+ years)" type="number" id="session-experience" name="experience" autoComplete="experience" />
+			<Input value={formData.topicsToFocus} onChange={({ target }) => handleChange("topicsToFocus", target.value)} label="Topics to Focus On" placeholder="(Comma-separated, e.g., React, Node.js, MongoDB)" type="text" id="session-topics" name="topicsToFocus" autoComplete="focus topics" />
+			<Input value={formData.description} onChange={({ target }) => handleChange("description", target.value)} label="Description" placeholder="(Any specific goals or notes for this session)" type="text" id="session-description" name="description" autoComplete="description" />
 
 			{error && <p className="text-red-500 text-xs pb-2.5">{error}</p>}
 
